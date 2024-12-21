@@ -1,7 +1,7 @@
 ## Cel projektu
 Celem projektu jest stworzenie skryptu w języku Bash, który umożliwi efektywne zarządzanie zasobami systemowymi oraz komunikację z podłączonym urządzeniem USB. Projekt integruje funkcjonalności związane z zarządzaniem procesami, monitorowaniem pamięci oraz filtrowaniem danych.
 
-Projekt ten stanowi narzędzie pomocnicze dla studentów w ramach nauki na przedmiot Systemy Operacyjne
+Projekt ten stanowi narzędzie pomocnicze dla studentów w ramach nauki na przedmiot Systemy Operacyjne.
 
 ## Zakres projektu
 1. **Identyfikacja, monitorowanie i zarządzanie procesami oraz wątkami.**
