@@ -38,13 +38,13 @@ Projekt ten stanowi narzędzie pomocnicze dla studentów w ramach nauki na przed
    ```
 2. Przejdź do katalogu projektu:
    ```bash
-   cd bash_script_project
+   cd system-multitool
    ```
 3. Nadaj uprawnienia do wykonania skryptu:
    ```bash
-   chmod +x script.sh
+   chmod +x tool.sh
    ```
 4. Uruchom skrypt:
    ```bash
-   ./script.sh
+   ./tool.sh
    ```
