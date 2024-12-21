@@ -1,5 +1,3 @@
-# Projekt Bash Script - Zarządzanie Systemem i Komunikacja USB
-
 ## Cel projektu
 Celem projektu jest stworzenie skryptu w języku Bash, który umożliwi efektywne zarządzanie zasobami systemowymi oraz komunikację z podłączonym urządzeniem USB. Projekt integruje funkcjonalności związane z zarządzaniem procesami, monitorowaniem pamięci oraz filtrowaniem danych.
 
