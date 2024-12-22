@@ -10,7 +10,7 @@ function threads_info ()
 
     # get the biggest process size and name
     threads=$(ps H -eo pid,size,cmd | uniq -c | sort -n | tail -1 | tr -s ' ' | cut -d ' ' -f2)
-    name=$(ps H -eo pid,size,cmd | uniq -c | sort -n | tail -1 | tr -s ' ' | cut -d ' ' -f5)
+    name=$(ps H -eo pid,size,cmd | uniq -c | sort -n | tail -1 | tr -s ' ' | cut -d ' ' -f5,6,7)
     size=$(ps H -eo pid,size,cmd | uniq -c | sort -n | tail -1 | tr -s ' ' | cut -d ' ' -f4)
 
     if [[ size -le 0 ]]; then
@@ -20,6 +20,7 @@ function threads_info ()
 
     echo $COOL_LINES
     echo "Number of system threads: $threads_count"
+    echo $COOL_LINES
     echo "name: $name"
     echo "size: $size KB"
     echo "threads: $threads"
