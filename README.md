@@ -11,19 +11,23 @@ Projekt ten stanowi narzędzie pomocnicze dla studentów w ramach nauki na przed
 
 ## Funkcjonalności
 
-### 1. Procesy i wątki
-- **Procesy:**
-  - Wyświetlanie liczby procesów w systemie.
-  - Wyświetlanie nazwy i rozmiaru największego procesu.
-- **Wątki:**
-  - Wyświetlanie liczby wątków w systemie.
-  - Wyświetlanie nazwy i rozmiaru procesu o największej liczbie wątków oraz liczby wątków.
+### 1. Procesy, wątki
+
+a) Liczba procesów i wątków w systemie,
+b) Dla największego procesu w systemie:
+Nazwę, PID, rozmiar, klasę planowania, priorytet planowania
+Liczbę procesów potomnych, liczbę otwartych plików
+c) Dla procesu o największej liczbie wątków:
+Nazwę, PID, klasę planowania, priorytet planowania
+d) Dla procesu o podanej nazwie przez użytkownika:
+PID, rozmiar pamięci wirtulnej (VmSize), rozmiar pamieci fizycznej (VmRSSS)
+Liczbę wątków, liczbę otwartych plików
+Liczba dobrowolnych przełączeń kontekstu (voluntary_ctxt_switches)
+Liczba przymusowych przełączeń kontekstu (nonvoluntary_ctxt_switches)
 
 ### 2. Pamięci
 
-### 3. Urządzenia wejścia-wyjścia (I/O)
-
-### 4. Filtrowanie plików
+### 3. Urządzenia
 
 ## Wymagania systemowe
 - System operacyjny Linux (np. Ubuntu, Debian).
