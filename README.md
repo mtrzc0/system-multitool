@@ -13,13 +13,13 @@ Projekt ten stanowi narzędzie pomocnicze dla studentów w ramach nauki na przed
 
 ### 1. Procesy, wątki
 
-a) Liczba procesów i wątków w systemie,
-b) Dla największego procesu w systemie:
+- a. Liczba procesów i wątków w systemie
+- b. Dla największego procesu w systemie:
 Nazwę, PID, rozmiar, klasę planowania, priorytet planowania
 Liczbę procesów potomnych, liczbę otwartych plików
-c) Dla procesu o największej liczbie wątków:
+- c. Dla procesu o największej liczbie wątków:
 Nazwę, PID, klasę planowania, priorytet planowania
-d) Dla procesu o podanej nazwie przez użytkownika:
+- d. Dla procesu o podanej nazwie przez użytkownika:
 PID, rozmiar pamięci wirtulnej (VmSize), rozmiar pamieci fizycznej (VmRSSS)
 Liczbę wątków, liczbę otwartych plików
 Liczba dobrowolnych przełączeń kontekstu (voluntary_ctxt_switches)
