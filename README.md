@@ -6,7 +6,7 @@ Projekt ten stanowi narzędzie pomocnicze dla studentów w ramach nauki na przed
 ## Zakres projektu
 1. **Identyfikacja, monitorowanie i zarządzanie procesami oraz wątkami.**
 2. **Monitorowanie i zarządzanie pamięcią główną, pomocniczą i wirtualną.**
-3. **Komunikacja z urządzeniem USB, obsługującym określone polecenia.**
+3. **Identyfikacja, monitorowanie urządzeń blokowych i znakowych podłączonym przez USB**
 
 ## Funkcjonalności
 
