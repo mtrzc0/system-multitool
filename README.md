@@ -12,18 +12,28 @@ Projekt ten stanowi narzędzie pomocnicze dla studentów w ramach nauki na przed
 ## Funkcjonalności
 
 ### 1. Procesy, wątki
-
-- a. Liczba procesów i wątków w systemie
-- b. Dla największego procesu w systemie:
-Nazwę, PID, rozmiar, klasę planowania, priorytet planowania
-Liczbę procesów potomnych, liczbę otwartych plików
-- c. Dla procesu o największej liczbie wątków:
-Nazwę, PID, klasę planowania, priorytet planowania
-- d. Dla procesu o podanej nazwie przez użytkownika:
-PID, rozmiar pamięci wirtulnej (VmSize), rozmiar pamieci fizycznej (VmRSSS)
-Liczbę wątków, liczbę otwartych plików
-Liczba dobrowolnych przełączeń kontekstu (voluntary_ctxt_switches)
-Liczba przymusowych przełączeń kontekstu (nonvoluntary_ctxt_switches)
+- a) Liczba procesów i wątków w systemie
+- b) Dla największego procesu w systemie:
+   - Nazwę
+   - PID
+   - rozmiar
+   - klasę planowania
+   - priorytet planowania
+   - Liczbę procesów potomnych
+   - liczbę otwartych plików
+- c) Dla procesu o największej liczbie wątków:
+   - Nazwę
+   - PID
+   - klasę planowania
+   - priorytet planowania
+- d) Dla procesu o podanej nazwie przez użytkownika:
+   - PID
+   - rozmiar pamięci wirtulnej (VmSize)
+   - rozmiar pamieci fizycznej (VmRSSS)
+   - Liczbę wątków,
+   - liczbę otwartych plików
+   - Liczba dobrowolnych przełączeń kontekstu (voluntary_ctxt_switches)
+   - Liczba przymusowych przełączeń kontekstu (nonvoluntary_ctxt_switches)
 
 ### 2. Pamięci
 
@@ -33,7 +43,7 @@ Liczba przymusowych przełączeń kontekstu (nonvoluntary_ctxt_switches)
 - System operacyjny Linux (np. Ubuntu, Debian).
 - Bash w wersji 4.0 lub wyższej.
 - Uprawnienia administratora (sudo) do wykonywania niektórych poleceń.
-- Narzędzia systemowe: `grep`, `awk`, `sed`, `ps`, `free`, `lsusb`.
+- Narzędzia systemowe: `grep`, `pgrep`, `ps`.
 
 ## Instalacja i uruchomienie
 1. Sklonuj repozytorium:
