@@ -21,10 +21,10 @@ function process_big ()
     COOL_LINES="--------------------------------------------------"
 
     # get the biggest process size and name
-    name=$(ps -eo cmd --sort=size | tail -1 | tr -s ' ' | cut -d ' ' -f1)
+    name=$(ps -eo comm --sort=size | tail -1 | tr -s ' ' | cut -d ' ' -f1)
     pid=$(ps -eo pid --sort=size | tail -1 | tr -s ' ' | cut -d ' ' -f2)
     size=$(ps -eo size --sort=size | tail -1 | tr -s ' ' | cut -d ' ' -f1)
-    class=$(ps -eco cls --sort=size | tail -1 | tr -s ' ' | cut -d ' ' -f2)
+    class=$(ps -eo cls --sort=size | tail -1 | tr -s ' ' | cut -d ' ' -f2)
     priority=$(ps -eo priority --sort=size | tail -1 | tr -s ' ' | cut -d ' ' -f2)
     children=$(pgrep --parent $pid | wc -l)
     files_open=$(lsof -p $pid | wc -l)
@@ -44,7 +44,6 @@ function process_big ()
     echo "files open: $files_open"
     #ls -l "/proc/$pid/status"
     echo $COOL_LINES
-    #TODO
 
     exit 0 # ERROR CODE 0 - success
 }
