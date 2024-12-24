@@ -1,7 +1,7 @@
 #!/bin/bash
 
 . process.sh
-. threads.sh
+. thread.sh
 
 OPTIONS="Processes Threads Memory I/O Files"
 
@@ -13,7 +13,7 @@ select option in $OPTIONS
 do
     case $REPLY in
         1) process_main ;;
-        2) threads_info ;;
+        2) thread_main  ;;
         *) exit 0       ;;    
     esac
 done

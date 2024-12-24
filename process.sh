@@ -1,5 +1,33 @@
 #!/bin/bash
 
+function process_get ()
+{
+    # separator
+    COOL_LINES="--------------------------------------------------"
+
+    read -p "Name of the process: " name
+
+    echo $COOL_LINES
+    pid=$(ps -eo pid,comm --sort=size | grep $name | tail -1 | tr -s ' ' | cut -d ' ' -f2)
+    cat /proc/$pid/status 2>/dev/null > temp
+    get_pid=$(cat ./temp | grep ^Pid)
+    echo $get_pid
+    get_vmsize=$(cat ./temp | grep ^VmSize)
+    echo $get_vmsize
+    get_vmrss=$(cat ./temp | grep ^VmRSS)
+    echo $get_vmrss
+    get_threads=$(cat ./temp | grep ^Threads)
+    echo $get_threads
+    get_voluntary_ctxt_switches=$(cat ./temp | grep ^voluntary_ctxt_switches)
+    echo "$get_voluntary_ctxt_switches"
+    get_nonvoluntary_ctxt_switches=$(cat ./temp | grep ^nonvoluntary_ctxt_switches)
+    echo $get_nonvoluntary_ctxt_switches
+    echo $COOL_LINES
+    rm ./temp
+    
+    exit 0 # ERROR CODE 0 - success
+}
+
 function process_count ()
 {
     # separator
@@ -50,7 +78,7 @@ function process_big ()
 
 function process_main ()
 {
-    OPTIONS="Count Biggest"
+    OPTIONS="Count Biggest Custom"
 
     echo "Which information about process to display? "
     PS3="> "
@@ -59,6 +87,7 @@ function process_main ()
         case $REPLY in
             1) process_count    ;;
             2) process_big      ;;
+            3) process_get      ;;
             *) exit 0           ;;    
         esac
     done
