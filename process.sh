@@ -10,17 +10,17 @@ function process_get ()
     echo $COOL_LINES
     pid=$(ps -eo pid,comm --sort=size | grep $name | tail -1 | tr -s ' ' | cut -d ' ' -f2)
     cat /proc/$pid/status 2>/dev/null > temp
-    get_pid=$(cat ./temp | grep ^Pid)
+    get_pid=$(cat ./temp | grep ^Pid | tr -d '\t')
     echo $get_pid
-    get_vmsize=$(cat ./temp | grep ^VmSize)
+    get_vmsize=$(cat ./temp | grep ^VmSize | tr -d '\t' | tr -d ' ')
     echo $get_vmsize
-    get_vmrss=$(cat ./temp | grep ^VmRSS)
+    get_vmrss=$(cat ./temp | grep ^VmRSS | tr -d '\t' | tr -d ' ')
     echo $get_vmrss
-    get_threads=$(cat ./temp | grep ^Threads)
+    get_threads=$(cat ./temp | grep ^Threads | tr -d '\t')
     echo $get_threads
-    get_voluntary_ctxt_switches=$(cat ./temp | grep ^voluntary_ctxt_switches)
+    get_voluntary_ctxt_switches=$(cat ./temp | grep ^voluntary_ctxt_switches | tr -d '\t')
     echo "$get_voluntary_ctxt_switches"
-    get_nonvoluntary_ctxt_switches=$(cat ./temp | grep ^nonvoluntary_ctxt_switches)
+    get_nonvoluntary_ctxt_switches=$(cat ./temp | grep ^nonvoluntary_ctxt_switches | tr -d '\t')
     echo $get_nonvoluntary_ctxt_switches
     echo $COOL_LINES
     rm ./temp
