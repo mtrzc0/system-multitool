@@ -7,6 +7,7 @@ function memory_used_free_main ()
 
     echo $COOL_LINES
     free -h | tr -s ' ' | cut -d ' ' -f2,3
+    echo $COOL_LINES
 }
 
 function memory_active_main ()
@@ -16,6 +17,7 @@ function memory_active_main ()
 
     echo $COOL_LINES
     cat /proc/meminfo | grep -E 'Active'
+    echo $COOL_LINES
 }
 
 function memory_inactive_main ()
@@ -25,6 +27,7 @@ function memory_inactive_main ()
 
     echo $COOL_LINES
     cat /proc/meminfo | grep -E 'Inactive'
+    echo $COOL_LINES
 }
 
 function memory_page_4k_2M_main ()
@@ -34,6 +37,7 @@ function memory_page_4k_2M_main ()
 
     echo $COOL_LINES
     cat /proc/meminfo | grep -E 'DirectMap4k|DirectMap2M'
+    echo $COOL_LINES
 }
 
 function memory_used_free_disk ()
@@ -43,6 +47,7 @@ function memory_used_free_disk ()
 
     echo $COOL_LINES
     df --output='source,avail,used'
+    echo $COOL_LINES
 }
 
 function memory_used_free_partition_disk ()
@@ -52,6 +57,7 @@ function memory_used_free_partition_disk ()
 
     echo $COOL_LINES
     lsblk -o NAME,FSSIZE,FSUSED,FSAVAIL --noempty
+    echo $COOL_LINES
 }
 
 function memory_main ()

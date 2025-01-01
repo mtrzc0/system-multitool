@@ -3,7 +3,7 @@
 . process.sh
 . thread.sh
 . memory.sh
-#. devices.sh
+. devices.sh
 
 OPTIONS="Processes Threads Memory I/O"
 

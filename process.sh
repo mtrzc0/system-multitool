@@ -78,7 +78,7 @@ function process_big ()
 
 function process_main ()
 {
-    OPTIONS="Count Biggest Custom"
+    OPTIONS="process_count_in_system biggest_process_in_the_system show_info_about_the_process"
 
     echo "Which information about process to display? "
     PS3="> "

@@ -1,8 +1,6 @@
 #!/bin/bash
-
-function thread_count ()
-{
-    # separator
+function thread_count () { 
+    # separator 
     COOL_LINES="--------------------------------------------------"
 
     # get number of system threads 
@@ -11,9 +9,6 @@ function thread_count ()
     echo $COOL_LINES
     echo "Number of system threads: $threads_count"
     echo $COOL_LINES
-
-    exit 0 # ERROR CODE 0 - success
-
 }
 
 function thread_big () 
@@ -38,12 +33,11 @@ function thread_big ()
     echo "planning class: $class"
     echo "priority: $priority"
     echo $COOL_LINES
-    exit 0 # ERROR CODE 0 - success
 }
 
 function thread_main ()
 {
-    OPTIONS="Count Biggest"
+    OPTIONS="count_threads_in_the_system biggest_thread_in_the_system"
 
     echo "Which information about threads to display? "
     PS3="> "
