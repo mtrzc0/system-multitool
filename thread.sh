@@ -52,7 +52,7 @@ function thread_main ()
         case $REPLY in
             1) thread_count    ;;
             2) thread_big      ;;
-            *) exit 0           ;;    
+            *) exit 0          ;;    
         esac
     done
 }

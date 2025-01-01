@@ -2,8 +2,10 @@
 
 . process.sh
 . thread.sh
+. memory.sh
+#. devices.sh
 
-OPTIONS="Processes Threads Memory I/O Files"
+OPTIONS="Processes Threads Memory I/O"
 
 clear
 
@@ -12,8 +14,10 @@ PS3="> "
 select option in $OPTIONS
 do
     case $REPLY in
-        1) process_main ;;
-        2) thread_main  ;;
-        *) exit 0       ;;    
+        1) process_main  ;;
+        2) thread_main   ;;
+        3) memory_main   ;;
+        4) devices_main  ;;
+        *) exit 0        ;;    
     esac
 done
