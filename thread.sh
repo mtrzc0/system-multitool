@@ -40,13 +40,15 @@ function thread_main ()
     OPTIONS="count_threads_in_the_system biggest_thread_in_the_system"
 
     echo "Which information about threads to display? "
+    echo "Press any key to display main menu..."
+    echo ""
     PS3="> "
     select option in $OPTIONS
     do
         case $REPLY in
             1) thread_count    ;;
             2) thread_big      ;;
-            *) exit 0          ;;    
+            *) ./tool.sh       ;;    
         esac
     done
 }

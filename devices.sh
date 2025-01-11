@@ -77,6 +77,8 @@ function devices_main ()
     OPTIONS="devices_name_size_type_disk devices_block_uniq_major_number devices_name_size_type_main devices_char_uniq_major_number devices_network_controller devices_network_controller devices_sockets_list devices_ports_list"
 
     echo "Which information about memory to display? "
+    echo "Press any key to display main menu..."
+    echo ""
     PS3="> "
     select option in $OPTIONS
     do
@@ -89,7 +91,7 @@ function devices_main ()
             6) memory_used_free_partition_disk   ;;
             7) devices_sockets_list              ;;
             8) devices_ports_list                ;;
-            *) exit 0                            ;;    
+            *) ./tool.sh                         ;;    
         esac
     done
     exit 0

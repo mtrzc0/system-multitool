@@ -65,6 +65,8 @@ function memory_main ()
     OPTIONS="used_free_main active_main inactive_main page_4k_2M_main used_free_disk used_free_partition_disk"
 
     echo "Which information about memory to display? "
+    echo "Press any key to display main menu..."
+    echo ""
     PS3="> "
     select option in $OPTIONS
     do
@@ -75,7 +77,7 @@ function memory_main ()
             4) memory_page_4k_2M_main            ;;
             5) memory_used_free_disk             ;;
             6) memory_used_free_partition_disk   ;;
-            *) exit 0                            ;;    
+            *) ./tool.sh                         ;;    
         esac
     done
     exit 0

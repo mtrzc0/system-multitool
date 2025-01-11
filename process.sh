@@ -24,8 +24,6 @@ function process_get ()
     echo $get_nonvoluntary_ctxt_switches
     echo $COOL_LINES
     rm ./temp
-    
-    exit 0 # ERROR CODE 0 - success
 }
 
 function process_count ()
@@ -38,8 +36,6 @@ function process_count ()
     echo $COOL_LINES
     echo "Number of system processes: $process_count"
     echo $COOL_LINES
-
-    exit 0 # ERROR CODE 0 - success
 }
 
 
@@ -72,8 +68,6 @@ function process_big ()
     echo "files open: $files_open"
     #ls -l "/proc/$pid/status"
     echo $COOL_LINES
-
-    exit 0 # ERROR CODE 0 - success
 }
 
 function process_main ()
@@ -81,6 +75,8 @@ function process_main ()
     OPTIONS="process_count_in_system biggest_process_in_the_system show_info_about_the_process"
 
     echo "Which information about process to display? "
+    echo "Press any key to display main menu..."
+    echo ""
     PS3="> "
     select option in $OPTIONS
     do
@@ -88,7 +84,7 @@ function process_main ()
             1) process_count    ;;
             2) process_big      ;;
             3) process_get      ;;
-            *) exit 0           ;;    
+            *) ./tool.sh        ;;    
         esac
     done
 }
